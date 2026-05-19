@@ -455,7 +455,7 @@ export default function Layout({ children, user, onLogout, theme = 'dark', onThe
 
         {/* ── CONTENT ──────────────────────────────────────────── */}
         <div className="flex-1 overflow-hidden">
-            <main className={`h-full ${location.pathname === '/map' ? 'overflow-hidden' : 'overflow-auto p-4'}`}>
+          <main className={`h-full ${location.pathname === '/map' ? 'overflow-y-auto' : 'overflow-auto p-4'}`}>
             {children}
           </main>
         </div>
