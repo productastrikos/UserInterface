@@ -91,7 +91,7 @@ export default function KPICard({ label, value, unit, icon, color, rag: ragProp,
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>
         <div
           className="rounded-xl flex items-center justify-center leading-none cwm-kpi-icon"
-          style={{ width: '32px', height: '32px', fontSize: '1.15rem', flexShrink: 0 }}
+          style={{ width: '32px', height: '32px', fontSize: '1.15rem', flexShrink: 0, color: '#38bdf8' }}
         >
           {icon || '▣'}
         </div>

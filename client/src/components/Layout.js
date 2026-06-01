@@ -9,16 +9,33 @@ const NAV_SECTIONS = [
   {
     label: 'Overview',
     items: [
-      { path: '/',            icon: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4', label: 'Dashboard' },
+      { path: '/',               icon: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4', label: 'Dashboard' },
     ],
   },
   {
-    label: 'Main',
+    label: 'AI Assistant',
     items: [
-      { path: '/operations',  icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2', label: 'Operations' },
-      { path: '/analytics',   icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z', label: 'Analytics' },
-      { path: '/services',    icon: 'M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z', label: 'Services' },
-      { path: '/map',         icon: 'M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7', label: 'Digital Twin' },
+      { path: '/chatbot',        icon: 'M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z', label: 'Design Assistant' },
+    ],
+  },
+  {
+    label: 'Validation',
+    items: [
+      { path: '/documents',      icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z', label: 'Document Intel' },
+      { path: '/validator',      icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', label: 'Rule Validator' },
+      { path: '/specifications', icon: 'M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2zM9 13h6M9 17h6M9 9h1', label: 'Spec Generator' },
+    ],
+  },
+  {
+    label: 'Visualization',
+    items: [
+      { path: '/visualizer',     icon: 'M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16zM3.27 6.96L12 12.01l8.73-5.05M12 22.08V12', label: '3D Design Viewer' },
+    ],
+  },
+  {
+    label: 'Governance',
+    items: [
+      { path: '/compliance',     icon: 'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z', label: 'Compliance & Audit' },
     ],
   },
 ];
@@ -29,39 +46,13 @@ const NAV_SECTIONS = [
    keywords   = extra words matched against (not displayed)
 ────────────────────────────────────────────────────────── */
 const SEARCH_INDEX = [
-  /* ── Dashboard ── */
-  { label:'Dashboard',             path:'/',             breadcrumb:['Dashboard'],                         icon:'📊', keywords:'overview kpi summary home main metrics' },
-  { label:'Performance Rate',      path:'/',             breadcrumb:['Dashboard','KPI Cards'],             icon:'📊', keywords:'performance rate operations completed daily percentage' },
-  { label:'Exception Rate',        path:'/',             breadcrumb:['Dashboard','KPI Cards'],             icon:'📊', keywords:'exceptions errors failures issues rate' },
-  { label:'Efficiency Savings',    path:'/',             breadcrumb:['Dashboard','KPI Cards'],             icon:'📊', keywords:'efficiency cost savings optimisation time' },
-  { label:'Daily Volume',          path:'/',             breadcrumb:['Dashboard','KPI Cards'],             icon:'📊', keywords:'daily volume units processed throughput' },
-  { label:'Quality Score',         path:'/',             breadcrumb:['Dashboard','KPI Cards'],             icon:'📊', keywords:'quality score pass rate threshold criteria' },
-  { label:'Threshold Breaches',    path:'/',             breadcrumb:['Dashboard','KPI Cards'],             icon:'📊', keywords:'threshold breaches sensors monitoring alerts' },
-  { label:'Segment Overview',      path:'/',             breadcrumb:['Dashboard','Segment Overview'],      icon:'📊', keywords:'segments utilization overview bar chart' },
-  { label:'Digital Twin Preview',  path:'/',             breadcrumb:['Dashboard','Digital Twin Preview'],  icon:'📊', keywords:'map mini preview digital twin locations nodes' },
-
-  /* ── Operations ── */
-  { label:'Operations',            path:'/operations',   breadcrumb:['Operations'],                        icon:'📦', keywords:'operations records assets inventory management' },
-  { label:'Records',               path:'/operations',   breadcrumb:['Operations','Records tab'],          icon:'📋', keywords:'records data entries table list management completed pending critical' },
-  { label:'Assets',                path:'/operations',   breadcrumb:['Operations','Assets tab'],           icon:'📦', keywords:'assets equipment resources utilization active maintenance offline' },
-  { label:'Inventory',             path:'/operations',   breadcrumb:['Operations','Inventory tab'],        icon:'📦', keywords:'inventory capacity storage locations daily intake normal warning critical' },
-
-  /* ── Analytics ── */
-  { label:'Analytics',             path:'/analytics',    breadcrumb:['Analytics'],                        icon:'📈', keywords:'analytics reporting workflow pipeline monitor live' },
-  { label:'Analytics Reports',     path:'/analytics',    breadcrumb:['Analytics','Analytics tab'],         icon:'📈', keywords:'analytics reports score yoy improvement trend chart breakdown initiatives' },
-  { label:'Workflow Pipeline',     path:'/analytics',    breadcrumb:['Analytics','Workflow tab'],          icon:'🔄', keywords:'workflow pipeline stages intake processing output backlog throughput' },
-  { label:'System Monitor',        path:'/analytics',    breadcrumb:['Analytics','Monitor tab'],           icon:'🖥', keywords:'monitor live units output uptime warnings temperature' },
-
-  /* ── Services ── */
-  { label:'Services',              path:'/services',     breadcrumb:['Services'],                         icon:'👥', keywords:'services requests support tickets feedback users open resolved' },
-  { label:'Open Requests',         path:'/services',     breadcrumb:['Services','KPIs'],                  icon:'👥', keywords:'open requests unresolved outstanding tickets' },
-  { label:'Resolved Requests',     path:'/services',     breadcrumb:['Services','KPIs'],                  icon:'👥', keywords:'resolved closed completed tickets today' },
-  { label:'Requests Table',        path:'/services',     breadcrumb:['Services','Table'],                 icon:'👥', keywords:'table requests list filter status priority user' },
-
-  /* ── Map ── */
-  { label:'Map',                   path:'/map',          breadcrumb:['Map'],                              icon:'🗺', keywords:'map geographic locations sites nodes hubs layers coverage' },
-  { label:'Map Markers',           path:'/map',          breadcrumb:['Map','Points'],                     icon:'🗺', keywords:'markers points sites nodes status active offline warning' },
-  { label:'Map Layers',            path:'/map',          breadcrumb:['Map','Controls'],                   icon:'🗺', keywords:'layers toggle sites nodes hubs coverage radius' },
+  { label:'Dashboard',             path:'/',                breadcrumb:['Dashboard'],                            icon:'📊', keywords:'overview kpi summary home main metrics validator hsl' },
+  { label:'Design Assistant',      path:'/chatbot',         breadcrumb:['AI Assistant','Chatbot'],               icon:'📊', keywords:'chatbot ai assistant query rule interpret design natural language nlp irs dnv abs iacs imo iec naval' },
+  { label:'Document Intelligence', path:'/documents',       breadcrumb:['Validation','Document Intel'],          icon:'📋', keywords:'document intel ocr scanned pdf extraction parse manual equipment text searchable convert word excel odf' },
+  { label:'Rule Validator',        path:'/validator',       breadcrumb:['Validation','Rule Validator'],          icon:'📈', keywords:'validate compliance rule class irs dnv abs iacs imo iec naval cross reference inconsistency' },
+  { label:'Specification Generator',path:'/specifications', breadcrumb:['Validation','Spec Generator'],          icon:'📋', keywords:'specification generator equipment system technical spec build hvac electrical mechanical piping hull outfit' },
+  { label:'3D Design Viewer',      path:'/visualizer',      breadcrumb:['Visualization','3D Viewer'],            icon:'🗺', keywords:'3d visualizer design viewer ship hull frames bulkhead compartment three dimensional model' },
+  { label:'Compliance & Audit',    path:'/compliance',      breadcrumb:['Governance','Compliance'],              icon:'👥', keywords:'compliance audit trail traceability usage analytics access security defence cyber' },
 ];
 
 /* ─── Icon helper ──────────────────────────────────────── */
@@ -89,11 +80,13 @@ const SEARCH_ICON_PATHS = {
 
 /* ─── Page title map ───────────────────────────────────── */
 const PAGE_TITLES = {
-  '/':            'Dashboard',
-  '/operations':  'Operations',
-  '/analytics':   'Analytics',
-  '/services':    'Services',
-  '/map':         'Digital Twin',
+  '/':                'Dashboard',
+  '/chatbot':         'Design Assistant',
+  '/documents':       'Document Intelligence',
+  '/validator':       'Rule Validator',
+  '/specifications':  'Specification Generator',
+  '/visualizer':      '3D Design Viewer',
+  '/compliance':      'Compliance & Audit',
 };
 
 export default function Layout({ children, user, onLogout, theme = 'dark', onThemeToggle }) {
@@ -195,30 +188,22 @@ export default function Layout({ children, user, onLogout, theme = 'dark', onThe
           style={{ height: 'var(--app-header-h, 62px)' }}
           onClick={() => navigate('/')}
         >
-          {/* Astrikos logo — clip transparent padding so visible content fills the container */}
           <div style={{
-            height: sidebarOpen ? 76 : 60,
-            overflow: 'hidden',
-            flexShrink: 0,
-            display: 'flex',
-            alignItems: 'flex-start',
-            transition: 'height 0.2s ease',
+            width: 36, height: 36, borderRadius: 10, flexShrink: 0,
+            background: 'linear-gradient(135deg,#0ea5e9 0%,#6366f1 60%,#8b5cf6 100%)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            boxShadow: '0 2px 12px rgba(99,102,241,0.35)',
           }}>
-            <img
-              src="/Logo Transparent Horizontal.png"
-              alt="Astrikos"
-              style={{
-                /* scale up so the ~63% visible-content band fills the container height */
-                height: sidebarOpen ? 120 : 96,
-                /* shift up to skip the ~17% top transparent padding */
-                marginTop: sidebarOpen ? -20 : -16,
-                width: 'auto',
-                display: 'block',
-                filter: 'var(--app-logo-filter, none)',
-                
-              }}
-            />
+            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 17h18M5 17V9l7-5 7 5v8M9 17v-5h6v5" />
+            </svg>
           </div>
+          {sidebarOpen && (
+            <div className="min-w-0">
+              <div className="text-[13px] font-extrabold leading-tight tracking-tight" style={{ color: 'var(--app-text)' }}>HSL Design Validator</div>
+              <div className="text-[9px] uppercase tracking-widest" style={{ color: 'var(--app-text-faint)' }}>AI · Offline · Secure</div>
+            </div>
+          )}
         </div>
 
         {/* Nav */}
@@ -290,8 +275,8 @@ export default function Layout({ children, user, onLogout, theme = 'dark', onThe
 
           {/* App Command Center title */}
           <div className="hidden sm:flex flex-col ml-1">
-            <span className="text-[11px] font-bold tracking-widest" style={{ color: 'var(--app-text)', letterSpacing: '0.10em' }}>APP COMMAND CENTER</span>
-            <span className="text-[9px]" style={{ color: 'var(--app-text-faint)' }}>{pageTitle}</span>
+            <span className="text-[11px] font-bold tracking-widest" style={{ color: 'var(--app-text)', letterSpacing: '0.10em' }}>HSL DESIGN VALIDATOR</span>
+            <span className="text-[9px]" style={{ color: 'var(--app-text-faint)' }}>{pageTitle} · Air-gapped Intranet</span>
           </div>
 
           {/* Search */}
