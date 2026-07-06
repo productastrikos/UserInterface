@@ -7,7 +7,6 @@ import Chatbot from './pages/Chatbot';
 import Documents from './pages/Documents';
 import Validator from './pages/Validator';
 import Specifications from './pages/Specifications';
-import Visualizer3D from './pages/Visualizer3D';
 import Compliance from './pages/Compliance';
 import Layout from './components/Layout';
 
@@ -41,7 +40,6 @@ function App() {
             <Route path="/documents"       element={<Documents />} />
             <Route path="/validator"       element={<Validator />} />
             <Route path="/specifications"  element={<Specifications />} />
-            <Route path="/visualizer"      element={<Visualizer3D />} />
             <Route path="/compliance"      element={<Compliance />} />
             <Route path="*"                element={<Navigate to="/" />} />
           </Routes>
