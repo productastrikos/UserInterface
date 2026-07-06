@@ -27,12 +27,6 @@ const NAV_SECTIONS = [
     ],
   },
   {
-    label: 'Visualization',
-    items: [
-      { path: '/visualizer',     icon: 'M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16zM3.27 6.96L12 12.01l8.73-5.05M12 22.08V12', label: '3D Design Viewer' },
-    ],
-  },
-  {
     label: 'Governance',
     items: [
       { path: '/compliance',     icon: 'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z', label: 'Compliance & Audit' },
@@ -51,7 +45,6 @@ const SEARCH_INDEX = [
   { label:'Document Intelligence', path:'/documents',       breadcrumb:['Validation','Document Intel'],          icon:'📋', keywords:'document intel ocr scanned pdf extraction parse manual equipment text searchable convert word excel odf' },
   { label:'Rule Validator',        path:'/validator',       breadcrumb:['Validation','Rule Validator'],          icon:'📈', keywords:'validate compliance rule class irs dnv abs iacs imo iec naval cross reference inconsistency' },
   { label:'Specification Generator',path:'/specifications', breadcrumb:['Validation','Spec Generator'],          icon:'📋', keywords:'specification generator equipment system technical spec build hvac electrical mechanical piping hull outfit' },
-  { label:'3D Design Viewer',      path:'/visualizer',      breadcrumb:['Visualization','3D Viewer'],            icon:'🗺', keywords:'3d visualizer design viewer ship hull frames bulkhead compartment three dimensional model' },
   { label:'Compliance & Audit',    path:'/compliance',      breadcrumb:['Governance','Compliance'],              icon:'👥', keywords:'compliance audit trail traceability usage analytics access security defence cyber' },
 ];
 
@@ -85,7 +78,6 @@ const PAGE_TITLES = {
   '/documents':       'Document Intelligence',
   '/validator':       'Rule Validator',
   '/specifications':  'Specification Generator',
-  '/visualizer':      '3D Design Viewer',
   '/compliance':      'Compliance & Audit',
 };
 
